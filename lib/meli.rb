@@ -155,6 +155,7 @@ private
             path = "#{API_ROOT_URL}#{path}"
         end
         path = "#{path}?#{to_url_params(params)}" if params.keys.size > 0
+        puts path
         uri = URI.parse path
     end
 
