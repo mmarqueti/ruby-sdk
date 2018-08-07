@@ -143,7 +143,7 @@ class Meli
         execute req
     end
 
-private
+#private
     def to_url_params(params)
       URI.escape(params.collect{|k,v| "#{k}=#{v}"}.join('&'))
     end
