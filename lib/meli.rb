@@ -40,6 +40,7 @@ class Meli
         params = { :grant_type => 'authorization_code', :client_id => @app_id, :client_secret => @secret, :code => code, :redirect_uri => redirect_URI}
 
         uri = make_path(OAUTH_URL, params)
+        p "uri: #{uri}"
 
         req = Net::HTTP::Post.new(uri.path)
         req['Accept'] = 'application/json'
